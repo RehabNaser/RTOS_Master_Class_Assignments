@@ -121,12 +121,12 @@ int main( void )
 	
 	/* Create Tasks here */
 	
-	xTaskCreate(	LED_Task,      			/* Function that implements the task. */
-					"LED Task",    			/* Text name for the task. */
-					100,      				/* Stack size in words, not bytes. */
-					( void * ) 0,    		/* Parameter passed into the task. */
+	xTaskCreate(	LED_Task,				/* Function that implements the task. */
+					"LED Task",				/* Text name for the task. */
+					100,					/* Stack size in words, not bytes. */
+					( void * ) 0,			/* Parameter passed into the task. */
 					1,						/* Priority at which the task is created. */
-					&LEDTaskHandle); 		/* Used to pass out the created task's handle. */
+					&LEDTaskHandle);		/* Used to pass out the created task's handle. */
 	
 
 	/* Now all the tasks have been started - start the scheduler.

@@ -1,0 +1,2 @@
+# Task_One
+ Use an existing RTOS project to write a program where a user shall be able to control LED toggling rate by pressing a push button, And the action is taken after releasing the button. Press longer than two seconds and less than 4 seconds will toggle the LED with periodicity 400ms. Press longer than 4 seconds will toggle the LED with periodicity 100ms. Press shorter than 2 seconds will turn the LED OFF.

@@ -1,1 +1,2 @@
 # Task_Two
+Use an existing RTOS project to write a program with 2 tasks. Both tasks are responsible for writing on UART any string 10 times each task cycle. The task cycles are, respectively, 100ms, and 500ms. The task with cycle 500ms shall have an empty loop that loops 100,000 times (To simulate heavy load) after every time a string is written on UART. Each task writing to UART shall not be interrupted by the other task.

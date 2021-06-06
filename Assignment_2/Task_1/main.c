@@ -151,7 +151,7 @@ void LED_Task( void * LED_Task_Parameters )
   for( ;; )
 	{
 		// Trying to take the xSemaphore
-		if( xSemaphoreTake( xSemaphore, ( TickType_t ) 0 ) == pdTRUE ) // If -> can take it, the LED will be toggled.
+		if( xSemaphoreTake( xSemaphore, ( TickType_t ) portMAX_DELAY ) == pdTRUE ) // If -> can take it, the LED will be toggled.
 		{		
 			if(LastLEDState==PIN_IS_LOW)	// If LastLEDState -> equal to low.																
 			{

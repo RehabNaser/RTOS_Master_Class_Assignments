@@ -86,7 +86,7 @@ to exclude the API function. */
 
 /* Trace Hook Macros */
 
-extern volatile float CPULoad;
+extern volatile unsigned int CPULoad;
 extern volatile unsigned int TotalSystemTime;
 extern volatile unsigned int Task1TimeIn,Task1TimeOut,Task1TimeTotal;
 extern volatile unsigned int Task2TimeIn,Task2TimeOut,Task2TimeTotal;

@@ -86,7 +86,7 @@ to exclude the API function. */
 
 /* Trace Hook Macros */
 
-extern volatile unsigned int CPULoad;
+extern volatile float CPULoad;
 extern volatile unsigned int TotalSystemTime;
 extern volatile unsigned int Task1TimeIn,Task1TimeOut,Task1TimeTotal;
 extern volatile unsigned int Task2TimeIn,Task2TimeOut,Task2TimeTotal;
@@ -137,7 +137,7 @@ extern volatile unsigned int Task2TimeIn,Task2TimeOut,Task2TimeTotal;
 																				Task2TimeTotal += (Task2TimeOut - Task2TimeIn); \
 																		} \
 																		TotalSystemTime=T1TC; \
-																		CPULoad = ((Task1TimeTotal + Task2TimeTotal)/(float)TotalSystemTime)*100; \
+																		CPULoad = (Task1TimeTotal + Task2TimeTotal)/(float)TotalSystemTime; \
 																 }while(0)
 															 
 #endif /* FREERTOS_CONFIG_H */

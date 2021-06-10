@@ -102,7 +102,7 @@ char RunTimeStatsBuff[130]; 				  	/* Global array to save the system's run time
 /*-----------------------------------------------------------*/
 
 #define TASK1_TAG			1														/* Task1 Tag. */
-#define TASK1_PERIOD 	20  												/* Task1 Period. */
+#define TASK1_PERIOD 	40  												/* Task1 Period. */
 
 TaskHandle_t Task1Handle = NULL; 									/* Task1 Handler. */
 
@@ -155,7 +155,7 @@ void Task1( void * Task1_Parameters )
 /*-----------------------------------------------------------*/
 
 #define TASK2_TAG			2														/* Task2 Tag. */
-#define TASK2_PERIOD 	40  												/* Task2 Period. */
+#define TASK2_PERIOD 	100  												/* Task2 Period. */
 
 TaskHandle_t Task2Handle = NULL; 									/* Task2 Handler. */
 
@@ -170,7 +170,8 @@ volatile uint32_t Task2DeadlineMissesCount=0;     /* variable to save the number
  */
 volatile TickType_t Task2TimeIn=0,Task2TimeOut=0,Task2TimeTotal=0;
 
-void Task2( void * Task2_Parameters )
+void Task2
+	( void * Task2_Parameters )
 {
 	uint32_t i=0;
 	
